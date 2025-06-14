@@ -70,21 +70,36 @@
 // }
 // console.log(calc(1, 2, 3, 4, 5)); // Output: 15
 
-function showInfo(us="Un",ag="Un",rt="Un",show="yes",...sk){
-    document.write(`<div>`);
-    document.write(`<h1>Welcome ${us}</h1>`);
-    document.write(`<p>Age: ${ag}</p>`);
-    document.write(`<p>Hour Rate: ${rt}</p>`);
-    if (show === "yes") {
-        if (sk.length === 0) {
-            sk = ["No skills"];
-        }
-        document.write(`<p>Skills: ${sk.join(' | ')}</p>`);
-    } else {
-        document.write(`<p>Skills are hidden</p>`);
-    }
-    document.write(`</div>`);
+// function showInfo(us="Un",ag="Un",rt="Un",show="yes",...sk){
+//     document.write(`<div>`);
+//     document.write(`<h1>Welcome ${us}</h1>`);
+//     document.write(`<p>Age: ${ag}</p>`);
+//     document.write(`<p>Hour Rate: ${rt}</p>`);
+//     if (show === "yes") {
+//         if (sk.length === 0) {
+//             sk = ["No skills"];
+//         }
+//         document.write(`<p>Skills: ${sk.join(' | ')}</p>`);
+//     } else {
+//         document.write(`<p>Skills are hidden</p>`);
+//     }
+//     document.write(`</div>`);
+// }
+// showInfo("ahmad", 20, 50,"yes");
+// showInfo("saleem", 25, 60,"no", "Python", "Django");
+// showInfo("ali", 30, 70,"yes", "Java", "Spring", "Hibernate");
+
+function showDetails(a, b, c) {
+if (typeof a === 'string' && typeof b === 'number' && typeof c === 'boolean') {
+    console.log(`Hello ${a}, Your Age Is: ${b}, You ${c== true ? "Are" : "Are Not"} Available to hire`);
 }
-showInfo("ahmad", 20, 50,"yes");
-showInfo("saleem", 25, 60,"no", "Python", "Django");
-showInfo("ali", 30, 70,"yes", "Java", "Spring", "Hibernate");
+if (typeof a === 'number' && typeof b === 'boolean' && typeof c === 'string') {
+    console.log(`Hello ${a}, Your Age Is: ${b}, You ${b== true ? "Are" : "Are Not"} Available to hire`);
+}
+if (typeof a === 'boolean' && typeof b === 'string' && typeof c === 'number') {
+    console.log(`Hello ${b}, Your Age Is: ${c}, You ${a== true ? "Are" : "Are Not"} Available to hire`);
+}
+}
+showDetails("ahmad", 20, true);
+showDetails(20, false, "ahmad");
+showDetails(true, "ahmad", 20);
