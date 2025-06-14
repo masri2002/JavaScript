@@ -53,10 +53,38 @@
 // }
 // console.log(generate(10, 20)); // it will print numbers from 10 to 15 and then return 'interrupted'
 
-function sayHello(firstName, age= 'unknown') {
+// function sayHello(firstName, age= 'unknown') {
 
-    return 'hello ' + firstName + ' you are ' + age + ' years old';
- }
+//     return 'hello ' + firstName + ' you are ' + age + ' years old';
+//  }
 
- console.log(sayHello('ahmad', 20));
- console.log(sayHello('saleem')); // age will be 'unknown'
+//  console.log(sayHello('ahmad', 20));
+//  console.log(sayHello('saleem')); // age will be 'unknown'
+
+// function calc(...numbers){
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+//     return sum;
+// }
+// console.log(calc(1, 2, 3, 4, 5)); // Output: 15
+
+function showInfo(us="Un",ag="Un",rt="Un",show="yes",...sk){
+    document.write(`<div>`);
+    document.write(`<h1>Welcome ${us}</h1>`);
+    document.write(`<p>Age: ${ag}</p>`);
+    document.write(`<p>Hour Rate: ${rt}</p>`);
+    if (show === "yes") {
+        if (sk.length === 0) {
+            sk = ["No skills"];
+        }
+        document.write(`<p>Skills: ${sk.join(' | ')}</p>`);
+    } else {
+        document.write(`<p>Skills are hidden</p>`);
+    }
+    document.write(`</div>`);
+}
+showInfo("ahmad", 20, 50,"yes");
+showInfo("saleem", 25, 60,"no", "Python", "Django");
+showInfo("ali", 30, 70,"yes", "Java", "Spring", "Hibernate");
