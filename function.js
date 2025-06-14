@@ -35,10 +35,21 @@
 // gernerateYears(2000, 2023 , 2010);
 
 
-function sayHello(firstName, age) {
-return 'hello ' + firstName + ' you are ' + age + ' years old';
-}
+// function sayHello(firstName, age) {
+// return 'hello ' + firstName + ' you are ' + age + ' years old';
+// }
 
-console.log(sayHello('ahmad', 20));
-let result = sayHello('saleem', 12);
-console.log(result);
+// console.log(sayHello('ahmad', 20));
+// let result = sayHello('saleem', 12);
+// console.log(result);
+
+function generate(start ,end){
+for (let i = start; i <= end; i++) {
+        if (i === 15) {
+            return 'interrupted';
+        }
+           console.log(i);
+}
+}
+console.log(generate(10, 20)); // it will print numbers from 10 to 15 and then return 'interrupted'
+
