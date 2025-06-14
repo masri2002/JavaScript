@@ -43,13 +43,21 @@
 // let result = sayHello('saleem', 12);
 // console.log(result);
 
-function generate(start ,end){
-for (let i = start; i <= end; i++) {
-        if (i === 15) {
-            return 'interrupted';
-        }
-           console.log(i);
-}
-}
-console.log(generate(10, 20)); // it will print numbers from 10 to 15 and then return 'interrupted'
+// function generate(start ,end){
+// for (let i = start; i <= end; i++) {
+//         if (i === 15) {
+//             return 'interrupted';
+//         }
+//            console.log(i);
+// }
+// }
+// console.log(generate(10, 20)); // it will print numbers from 10 to 15 and then return 'interrupted'
 
+function sayHello(firstName, age) {
+    if (age ===undefined )
+     age='unknown';
+    return 'hello ' + firstName + ' you are ' + age + ' years old';
+ }
+
+ console.log(sayHello('ahmad', 20));
+ console.log(sayHello('saleem')); // age will be 'unknown'
