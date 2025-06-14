@@ -53,9 +53,8 @@
 // }
 // console.log(generate(10, 20)); // it will print numbers from 10 to 15 and then return 'interrupted'
 
-function sayHello(firstName, age) {
-    if (age ===undefined )
-     age='unknown';
+function sayHello(firstName, age= 'unknown') {
+
     return 'hello ' + firstName + ' you are ' + age + ' years old';
  }
 
