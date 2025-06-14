@@ -23,13 +23,22 @@
 // sayHello('sara' , 18);
 
 
-function gernerateYears(startYear, endYear ,excluedYear) {
-    for (let i = startYear; i <= endYear; i++) {
-        if (i === excluedYear) {
-            continue;
-        }
-        console.log(i);
-    }
+// function gernerateYears(startYear, endYear ,excluedYear) {
+//     for (let i = startYear; i <= endYear; i++) {
+//         if (i === excluedYear) {
+//             continue;
+//         }
+//         console.log(i);
+//     }
+// }
+
+// gernerateYears(2000, 2023 , 2010);
+
+
+function sayHello(firstName, age) {
+return 'hello ' + firstName + ' you are ' + age + ' years old';
 }
 
-gernerateYears(2000, 2023 , 2010);
+console.log(sayHello('ahmad', 20));
+let result = sayHello('saleem', 12);
+console.log(result);
